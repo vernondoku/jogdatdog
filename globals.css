@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-navy text-bone font-sans antialiased; }
+  ::selection { background: #84C06C; color: #00304A; }
+}
+
+@layer components {
+  .disp { @apply font-display font-black italic uppercase leading-[0.92] tracking-[-0.01em]; }
+  .kick { @apply font-display font-bold uppercase tracking-[0.18em] text-sm text-teal-bright; }
+  .wrap { @apply max-w-wrap mx-auto px-5 md:px-12; }
+  .btn { @apply inline-flex items-center justify-center gap-2.5 min-h-[52px] px-7 rounded-full font-display font-black uppercase tracking-[0.06em] text-lg no-underline border-2 border-transparent cursor-pointer transition-all duration-200; }
+  .btn-primary { @apply bg-lime text-navy border-lime hover:bg-white hover:border-white hover:-translate-y-0.5; }
+  .btn-ghost { @apply bg-transparent text-bone border-teal/70 hover:bg-teal hover:border-teal hover:text-navy; }
+  .btn-navy { @apply bg-navy text-white border-navy hover:bg-white hover:border-white hover:text-navy; }
+  .btn-teal { @apply bg-teal-dark text-white border-teal-dark hover:bg-navy hover:border-navy min-h-[44px] text-[15px] px-5; }
+  .card-dark { @apply bg-navy-card border border-bone/10 rounded-[20px] transition-all duration-200 hover:-translate-y-1 hover:border-lime/60; }
+  .card-light { @apply bg-white text-navy rounded-[18px] shadow-[0_10px_30px_rgba(0,48,74,.08)] border border-navy/5; }
+  .band { @apply bg-navy text-bone relative overflow-hidden; }
+}
+
+/* motion */
+@keyframes rise { from { opacity: 0; transform: translateY(32px); } to { opacity: 1; transform: none; } }
+.rise { animation: rise .9s cubic-bezier(.2,.8,.2,1) both; }
+.d1 { animation-delay: .1s } .d2 { animation-delay: .28s } .d3 { animation-delay: .46s } .d4 { animation-delay: .64s }
+@keyframes tick { from { transform: translateX(0) } to { transform: translateX(-50%) } }
+.ticker-track { animation: tick 28s linear infinite; }
+.reveal { opacity: 1; }
+@supports (animation-timeline: view()) {
+  .reveal { animation: reveal both linear; animation-timeline: view(); animation-range: entry 0% entry 35%; }
+}
+@keyframes reveal { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .rise, .ticker-track, .reveal { animation: none !important; opacity: 1; transform: none; }
+  .btn, .card-dark { transition: none; }
+}
+.rail { @apply flex gap-3 overflow-x-auto snap-x snap-mandatory -mx-5 px-5 pb-3; scrollbar-width: none; }
+.rail::-webkit-scrollbar { display: none; }
+.rail > * { @apply snap-start shrink-0; }
