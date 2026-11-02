@@ -1,41 +1,31 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import BookButton from "@/components/BookButton";
-import { FinalCTA } from "@/components/sections";
-import { site } from "@/data/site";
+import { PricingTable, FinalCTA } from "@/components/sections";
 
 export const metadata: Metadata = {
-  title: "About Us — Kansas City's Mobile Dog Gym",
-  description: "Jog Dat Dog started with a simple idea: most dogs don't get enough real exercise, so we built a gym that drives to them. Meet the team behind Kansas City's mobile dog gym.",
-  alternates: { canonical: "/about/" },
+  title: "Pricing — Mobile Dog Gym Sessions & In-Home Training",
+  description: "Transparent pricing for Jog Dat Dog: intro session $75, solo and multi-dog slatmill sessions, in-home training $120 per visit, and recurring weekly options.",
+  alternates: { canonical: "/pricing/" },
 };
-
-const Check = () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#84C06C" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="shrink-0"><path d="m5 13 4 4L19 7" /></svg>;
 
 export default function Page() {
   return (
     <>
-      <PageHero kick="About Us" title={<>Our <span className="text-lime">story</span></>}
-        blurb="Jog Dat Dog started with a simple idea: most dogs don't get enough real exercise, and most owners don't have the time or the space to fix that. So we built a gym that drives to them."
-        img="/media/founder.jpg" alt="Founder Vernon sitting in the open door of the Jog Dat Dog van" placement="about_hero" />
+      <PageHero kick="Pricing" title={<>Simple, transparent <span className="text-lime">pricing</span></>}
+        blurb="Choose the session that fits your dog's needs. No packages to decode, no surprises." placement="pricing_hero" compact />
       <div className="bg-bone text-navy">
-        <section className="wrap pt-16 pb-6 grid md:grid-cols-3 gap-5 items-start">
-          <div className="card-light p-7 flex flex-col gap-3"><span className="inline-flex w-[52px] h-[52px] rounded-2xl bg-navy items-center justify-center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#84C06C" strokeWidth="2.4" strokeLinecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="4" /><path d="M12 3v3M12 18v3M3 12h3M18 12h3" /></svg></span><strong className="disp not-italic text-[28px]">Our mission</strong><p className="text-muted-dark m-0 leading-relaxed">A happier, healthier, more fulfilled dog — without the owner leaving home. Structured exercise, enrichment, and training that fits real life.</p></div>
-          <div className="card-light p-7 flex flex-col gap-3"><span className="inline-flex w-[52px] h-[52px] rounded-2xl bg-navy items-center justify-center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#84C06C" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M3 9l4-5h10l4 5-9 12z" /><path d="M3 9h18M9 4l3 17 3-17" /></svg></span><strong className="disp not-italic text-[28px]">Our difference</strong><p className="text-muted-dark m-0 leading-relaxed">A mobile gym with dog-powered slatmills, plus professional in-home training — one team, one van, tailored to your dog.</p></div>
-          <div className="card-light p-7 flex flex-col gap-3"><span className="inline-flex w-[52px] h-[52px] rounded-2xl bg-navy items-center justify-center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#84C06C" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 5.5-7 10-7 10z" /></svg></span><strong className="disp not-italic text-[28px]">Our values</strong>{["Dog-first approach", "Safety and trust", "Convenience", "Owners in the loop"].map((t) => <div key={t} className="flex gap-2.5 items-center font-medium"><Check />{t}</div>)}</div>
-        </section>
-        <section className="wrap py-7 pb-20 grid lg:grid-cols-2 gap-5 items-stretch">
-          <img src="/media/van.jpg" alt="The Jog Dat Dog van parked on a Kansas City street" className="w-full h-[300px] lg:h-[380px] object-cover object-[center_55%] rounded-[18px]" loading="lazy" />
-          <div className="card-light p-7 flex flex-col gap-3.5">
-            <p className="kick text-teal-dark m-0">The team</p>
-            <strong className="disp not-italic text-[32px]">Who shows up at your door</strong>
-            <p className="text-muted-dark m-0 leading-relaxed">[Founder story in your words — when you started, why slatmills, the first dog. 3–4 sentences.]</p>
-            <p className="text-muted-dark m-0 leading-relaxed">Serving {site.serviceAreas.join(", ")}. Supporting local rescues through the Helping Paws program — donate a run at booking.</p>
-            <BookButton placement="about_cta" className="self-start mt-auto" />
+        <section className="wrap py-14 md:py-16" id="pricing"><PricingTable /></section>
+        <section className="wrap pb-20 flex flex-col gap-5" aria-label="Single vs recurring">
+          <h2 className="disp text-[44px] md:text-[48px]">Single session or <span className="text-teal-dark">on repeat?</span></h2>
+          <div className="grid md:grid-cols-2 gap-5">
+            <div className="card-light p-6 flex flex-col gap-2"><p className="kick text-teal-dark m-0">Single session</p><strong className="text-xl">Book one at a time</strong><p className="text-muted-dark m-0 leading-relaxed">Good for a first try, a rainy week, or a dog that needs an extra outlet before a big day. Pay per visit.</p></div>
+            <div className="card-light p-6 flex flex-col gap-2 !bg-navy !text-bone border-navy"><p className="kick m-0">Recurring</p><strong className="text-xl text-white">Lock in a standing slot</strong><p className="text-bone-mid m-0 leading-relaxed">Same day, same time, every week. Dogs do best on a routine, and your slot is held for you. Set the cadence when you book.</p></div>
           </div>
+          <div className="flex justify-center pt-3"><BookButton placement="pricing_page" className="min-h-[60px] px-10 text-xl" /></div>
         </section>
       </div>
-      <FinalCTA placement="about_final" />
+      <FinalCTA placement="pricing_cta" />
     </>
   );
 }

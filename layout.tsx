@@ -29,7 +29,10 @@ const localBusiness = {
   image: `${site.url}/media/hero-desktop.jpg`,
   logo: `${site.url}/media/logo-lockup.png`,
   priceRange: "$$",
-  areaServed: site.serviceAreas.map((a) => ({ "@type": "City", name: a })),
+  areaServed: [
+    { "@type": "GeoCircle", geoMidpoint: { "@type": "GeoCoordinates", latitude: 39.0997, longitude: -94.5786 }, geoRadius: `${site.serviceRadiusMiles * 1609} m` },
+    ...site.serviceAreas.map((a) => ({ "@type": "City", name: a })),
+  ],
   sameAs: Object.values(site.social),
   aggregateRating: { "@type": "AggregateRating", ratingValue: site.google.rating, reviewCount: site.google.reviewCount },
   makesOffer: [
@@ -42,10 +45,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,900;1,900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
-        <link rel="icon" href="/media/logo-badge.png" />
+        <link rel="preload" href="/fonts/barlow-condensed-caps-900-italic.woff2" as="font" type="font/woff2" crossOrigin="" />
+        <link rel="preload" href="/fonts/barlow-condensed-lower-900-italic.woff2" as="font" type="font/woff2" crossOrigin="" />
+        <link rel="preload" href="/fonts/barlow-latin-400-normal.woff2" as="font" type="font/woff2" crossOrigin="" />
+        <link rel="icon" href="/media/favicon-v2.png" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusiness) }} />
         {GTM && (
           <script dangerouslySetInnerHTML={{ __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM}');` }} />

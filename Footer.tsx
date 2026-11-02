@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="wrap py-14 grid gap-8 md:grid-cols-3 text-sm text-muted">
         <div className="flex flex-col gap-3">
           <span className="disp text-[28px] text-lime">Your driveway.<br />Their gym.</span>
-          <img src="/media/logo-badge.png" alt="" className="h-10 w-auto mt-2" width="700" height="240" />
+          <img src="/media/logo-badge-v2.png" alt="" className="h-16 w-auto self-start mt-2" width="1000" height="518" />
           <span>Mobile dog gym &amp; in-home training · Kansas City metro</span>
         </div>
         <div className="flex flex-col gap-2">

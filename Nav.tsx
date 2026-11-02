@@ -23,7 +23,7 @@ export default function Nav() {
       <header className="sticky top-0 z-50 bg-navy/90 backdrop-blur border-b border-bone/10">
         <nav className="wrap flex items-center justify-between gap-6 min-h-[72px]" aria-label="Primary">
           <Link href="/" aria-label={`${site.name} home`} className="flex items-center">
-            <img src="/media/logo-badge.png" alt={`${site.name} — Mobile Dog Gym`} className="h-10 md:h-11 w-auto" width="700" height="240" />
+            <img src="/media/logo-badge-v2.png" alt={`${site.name} — Mobile Dog Gym`} className="h-11 md:h-12 w-auto" width="1000" height="518" />
           </Link>
           <div className="hidden lg:flex items-center gap-7">
             {nav.map((n) => (

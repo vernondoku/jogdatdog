@@ -12,7 +12,7 @@ Everything you'd normally edit lives in **`data/site.ts`**:
 | Service areas | `site.serviceAreas` (set `serviceAreasConfirmed: true` once verified) |
 | Phone / email / socials | `site` |
 | How-it-works steps + clips | `steps` |
-| Roster dogs (names, lines, photos) | `dogs` |
+| Benefit cards (home grid + Why JDD page) | `benefits` |
 | FAQ | `faq` |
 | Reviews | `data/reviews.json` (`featured` = home page cards) |
 
@@ -48,4 +48,4 @@ npm run build      # static export to ./out
 
 ## Open content items
 
-Search the code for `[` to find placeholders: dog names/bios, founder story (About), safety practices + service areas (FAQ), recurring discount (Pricing). Pricing in `data/site.ts` follows the Oct 2026 brief; the printed flyer differs — confirm.
+Search the code for `[` to find placeholders: dog names/bios, founder story (About), founder story only. Pricing and service area confirmed by Vern, Nov 2026.
