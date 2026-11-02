@@ -7,7 +7,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "node scripts/smoke.mjs",
+    "lighthouse": "node scripts/lighthouse.mjs"
   },
   "keywords": [],
   "author": "",
@@ -24,7 +26,9 @@
     "autoprefixer": "^10.6.2",
     "postcss": "^8.5.32",
     "tailwindcss": "^3.4.19",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "playwright": "^1.49.0",
+    "lighthouse": "^12.2.0"
   },
   "private": true
 }

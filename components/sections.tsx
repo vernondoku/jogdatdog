@@ -1,0 +1,10 @@
+export { ServiceTrio, Ticker, HowItWorks, Transformation, Reviews, FinalCTA } from "./sections/static";
+export { default as RatingBadge } from "./sections/RatingBadge";
+export { Hero } from "./sections/Hero";
+export { WatchSection } from "./sections/WatchSection";
+export { Athletes } from "./sections/Athletes";
+export { PricingTable } from "./sections/PricingTable";
+export { FAQ } from "./sections/FAQ";
+export { StepPicker } from "./sections/StepPicker";
+export { PackGrid } from "./sections/PackGrid";
+export { BookFlow } from "./sections/BookFlow";
