@@ -38,6 +38,8 @@ const localBusiness = {
   makesOffer: [
     { "@type": "Offer", name: "Mobile Dog Gym session", price: "60", priceCurrency: "USD", url: `${site.url}/pricing/` },
     { "@type": "Offer", name: "In-Home Dog Training visit", price: "120", priceCurrency: "USD", url: `${site.url}/dog-training/` },
+    { "@type": "Offer", name: "Canine Coaching + Fitness Run", price: "150", priceCurrency: "USD", url: `${site.url}/dog-training/#signature` },
+    { "@type": "Offer", name: "Monthly Slatmill Rental", price: "220", priceCurrency: "USD", url: `${site.url}/pricing/` },
   ],
 };
 

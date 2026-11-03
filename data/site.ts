@@ -54,22 +54,47 @@ export const nav = [
   { href: "/faq/", label: "FAQ" },
 ];
 
-/** Prices confirmed by Vern, Nov 2026 (intro $75). */
+/** Prices confirmed by Vern, Nov 2026, matched to the MoeGo catalog. Gym runs are 30 minutes only (no 60-minute option). */
 export const pricing = {
+  sessionMinutes: 30,
+  /** Introductory run — required for first-time dogs. Price by number of dogs from the same household. */
   intro: 75,
-  gym30: [
-    { name: "Solo", dogs: 1, price: 60 },
-    { name: "Duo", dogs: 2, price: 80 },
-    { name: "Trio", dogs: 3, price: 140 },
-    { name: "Quad", dogs: 4, price: 180 },
+  introByDogs: [
+    { dogs: 1, price: 75 },
+    { dogs: 2, price: 125 },
+    { dogs: 3, price: 175 },
+    { dogs: 4, price: 225, plus: true },
   ],
-  gym60: [
-    { name: "Solo", dogs: 1, price: 80 },
-    { name: "Duo", dogs: 2, price: 120 },
+  /** Recurring 30-minute runs. */
+  gym: [
+    { name: "Solo", dogs: 1, price: 60 },
+    { name: "Duo", dogs: 2, price: 100 },
     { name: "Trio", dogs: 3, price: 140 },
     { name: "Quad", dogs: 4, price: 180 },
   ],
   training: { price: 120, length: "30–45 minute visit" },
+  /** Signature service: slatmill run followed by 1:1 coaching in the home. */
+  signature: {
+    name: "Canine Coaching + Fitness Run",
+    price: 150,
+    tagline: "A tired mind learns better.",
+    desc: "A structured slatmill run to burn off the extra energy, then one-on-one coaching with you and your dog on the behaviors that matter in your home.",
+    includes: ["Structured slatmill run", "One-on-one coaching", "Owner participation", "Personalized homework", "Progress tracking"],
+    bestFor: ["High-energy breeds", "Working dogs", "Dogs that struggle to settle", "Reactive dogs"],
+  },
+  walk: { name: "30-Minute Dog Walk", price: 60, desc: "Dedicated one-on-one walking time with a JDD team member — a midday break, a potty run, or extra movement on a busy day." },
+  nails: { name: "Nail Trim & Dremel", price: 50, additional: 25, desc: "Trim and grind, added to any visit." },
+  rental: {
+    name: "Monthly Slatmill Rental",
+    desc: "Unlimited runs at home. We deliver and set up a slatmill sized for your dog.",
+    setupFee: 100,
+    deposit: 250,
+    tiers: [
+      { name: "Small dog", range: "under 40 lbs", price: 220 },
+      { name: "Medium dog", range: "40–70 lbs", price: 325 },
+      { name: "Large dog", range: "over 70 lbs", price: 350 },
+    ],
+  },
   recurringNote: "Same per-session rate on a standing weekly or twice-weekly slot. Set the cadence when you book.",
 };
 
@@ -115,7 +140,7 @@ export const steps: { num: string; title: string; caption: string; desc: string;
 /** Benefit cards (home "Why Jog Dat Dog" grid + Our Pack page). Photos are real client dogs; copy describes the service. */
 export const benefits: { title: string; tag: string; line: string; more: string; img: ImgName; alt: string }[] = [
   { title: "Real exercise, not just a walk.", tag: "body", line: "A full trot or run, not a sniff-and-stroll.",
-    more: "On a slatmill your dog can open up into a sustained trot or run — the kind of effort a leash walk rarely allows. Thirty or sixty minutes of real work, start to finish.",
+    more: "On a slatmill your dog can open up into a sustained trot or run — the kind of effort a leash walk rarely allows. Thirty minutes of real work, start to finish — the sweet spot we've found for dogs.",
     img: "ath1", alt: "Goldendoodle running with tongue out" },
   { title: "A calmer dog at home.", tag: "mind", line: "Energy with somewhere to go.",
     more: "Structured exercise gives a dog's energy an outlet. Paired with a predictable routine, many dogs settle more easily afterward — less pacing, less barking at the window, more napping.",
@@ -145,7 +170,8 @@ export const faq = [
   { q: "What's a slatmill?", a: "A treadmill powered entirely by the dog. There's no motor — your dog sets the pace and can stop any time." },
   { q: "Is it safe for my dog?", a: "Yes. Every session is supervised by a canine coach with vet tech experience, and the run is adjusted to your dog's conditioning and comfort. We keep water, treats, and toys on hand the whole time." },
   { q: "Where do you go?", a: "The Kansas City metro and all surrounding areas within a 20-mile radius of downtown." },
-  { q: "How long is a session?", a: "Gym sessions are 30 or 60 minutes. In-home training visits run 30–45 minutes." },
+  { q: "How long is a session?", a: "Gym runs are 30 minutes. We've found that's the sweet spot for dogs: a real workout without overdoing it. In-home training visits run 30–45 minutes, and our Coaching + Fitness Run combines both in one visit." },
+  { q: "What else do you offer?", a: "Beyond gym runs and training: a 30-minute dog walk, nail trim and dremel, and monthly slatmill rentals so your dog can run at home. Everything is on the pricing page." },
   { q: "Can you run more than one of my dogs?", a: "Yes — our dual slatmills handle duo, trio, and quad sessions for dogs from the same household." },
   { q: "What if it's raining or cold?", a: "The gym is a climate-controlled van, so sessions run year-round." },
   { q: "How do I book?", a: "Online, any time, through our booking page. Pick a service, pick a time, done. First-time dogs start with an introductory session." },

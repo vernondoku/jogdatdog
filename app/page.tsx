@@ -24,11 +24,11 @@ export default function Home() {
           {[
             { href: "/mobile-dog-gym/", img: "svc-gym" as const, alt: "Trainer crouched beside two dogs on dual slatmills", t: "Mobile Dog Gym", items: ["Individual slatmill workouts", "Multi-dog sessions", "Introductory sessions", "Recurring exercise"], d: "Supervised, dog-paced runs in a mobile gym parked in your driveway." },
             { href: "/dog-training/", img: "svc-training" as const, alt: "Trainer with a client and their dog beside the van", t: "In-Home Dog Training", items: ["Puppy foundations", "Leash manners", "Basic obedience", "Household behavior", "Owner coaching"], d: "Private sessions in your home, with you in the room learning alongside your dog." },
-            { href: "/dog-training/", img: "svc-combo" as const, alt: "Two dogs exercising side by side on slatmills", t: "Exercise + Training", items: ["Supervised exercise and coaching, combined when appropriate", "Built around your dog's needs"], d: "A tired dog learns better. Tailored, subject to availability.", tag: true },
+            { href: "/dog-training/#signature", img: "svc-combo" as const, alt: "Two dogs exercising side by side on slatmills", t: "Coaching + Fitness Run", items: ["Structured slatmill run first", "Then 1:1 coaching in your home", "Owner participation and homework"], d: "A tired mind learns better. Our signature visit, $150.", tag: true },
           ].map((s) => (
             <article key={s.t} className="card-dark reveal p-7 flex flex-col gap-4">
               <Img name={s.img} alt={s.alt} sizes="(min-width: 1024px) 33vw, 100vw" className="w-full h-48 object-cover object-[center_40%] rounded-2xl" />
-              <div className="flex items-center gap-2.5 flex-wrap"><h3 className="disp not-italic text-[36px] text-white">{s.t}</h3>{s.tag && <span className="kick text-[11px] border border-lime px-2 py-1 rounded">Tailored · subject to availability</span>}</div>
+              <div className="flex items-center gap-2.5 flex-wrap"><h3 className="disp not-italic text-[36px] text-white">{s.t}</h3>{s.tag && <span className="kick text-[11px] border border-lime px-2 py-1 rounded">Our signature service</span>}</div>
               <ul className="m-0 pl-5 text-bone-mid leading-relaxed">{s.items.map((i) => <li key={i}>{i}</li>)}</ul>
               <p className="text-muted m-0 leading-relaxed">{s.d}</p>
               <a href={s.href} className="btn btn-ghost self-start mt-auto" >See {s.t.toLowerCase()}</a>

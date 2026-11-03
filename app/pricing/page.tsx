@@ -5,7 +5,7 @@ import { PricingTable, FinalCTA } from "@/components/sections";
 
 export const metadata: Metadata = {
   title: "Pricing — Mobile Dog Gym Sessions & In-Home Training",
-  description: "Transparent pricing for Jog Dat Dog: intro session $75, solo and multi-dog slatmill sessions, in-home training $120 per visit, and recurring weekly options.",
+  description: "Transparent pricing for Jog Dat Dog: 30-minute slatmill runs from $60, intro run $75, in-home training $120, Coaching + Fitness Run $150, dog walks, nail trims, and monthly slatmill rentals.",
   alternates: { canonical: "/pricing/" },
 };
 

@@ -40,7 +40,7 @@ npm run build      # static export to ./out
 
 1. **GA4**: one property, web stream for `jogdatdog.com`. In Admin → Data Streams → Configure tag settings → Configure your domains, add `booking.moego.pet` (cross-domain).
 2. **GTM**: container with a GA4 Configuration tag (fires on All Pages) and GA4 Event tags for the custom events the site pushes to `dataLayer`:
-   `booking_funnel_entry` (params: `placement`, `service`), `video_play`, `video_complete`, `pricing_toggle`, `faq_open`, `step_view`, `reviews_click`.
+   `booking_funnel_entry` (params: `placement`, `service`), `video_play`, `video_complete`, `faq_open`, `step_view`, `reviews_click`.
 3. **MoeGo**: Online Booking → Integration → Google Analytics → paste the same GA4 Measurement ID. Completed bookings land on `/ol/appointment/submitted` on booking.moego.pet.
 4. **GA4 key event**: Admin → Events → Create event `booking_complete` where `page_location` contains `/ol/appointment/submitted`. Mark as key event.
 5. **Google Ads**: Tools → Conversions → Import from GA4 → `booking_complete`. Bid to this, not to clicks.
@@ -48,4 +48,4 @@ npm run build      # static export to ./out
 
 ## Open content items
 
-Search the code for `[` to find placeholders: dog names/bios, founder story (About), founder story only. Pricing and service area confirmed by Vern, Nov 2026.
+Search the code for `[` to find placeholders: dog names/bios, founder story (About), founder story only. Pricing and service area confirmed by Vern, Nov 2026, and matched to the MoeGo catalog (30-minute runs only; Duo $100; signature Coaching + Fitness Run $150; walks, nails, rentals).

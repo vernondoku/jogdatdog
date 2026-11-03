@@ -16,8 +16,8 @@ const benefits = [
   ["Supervised", "Eyes on your dog the whole run", "M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6zM9 12l2 2 4-4"],
 ];
 const options = [
-  ["First visit", "Introductory session", "A relaxed first run so your dog can get comfortable. Required for new dogs."],
-  ["One dog", "Solo workouts", "30 or 60 minutes of supervised running, one dog at a time."],
+  ["First visit", "Introductory run", "A relaxed first run so your dog can get comfortable. Required for new dogs; priced per dog for multi-dog homes."],
+  ["One dog", "Solo workouts", "30 minutes of supervised running, one dog at a time. The sweet spot for a real workout."],
   ["Same household", "Multi-dog sessions", "Duo, trio, or quad sessions on our dual mills in one visit."],
   ["Standing slot", "Recurring exercise", "Weekly or twice-weekly runs on a schedule. Set it once in booking."],
 ];
