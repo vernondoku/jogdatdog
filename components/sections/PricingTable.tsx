@@ -36,7 +36,7 @@ export function PricingTable() {
         <div className="card-light overflow-hidden">
           <div className="bg-teal-dark text-white font-display font-black uppercase tracking-[0.08em] text-lg px-6 py-3.5">Dog training</div>
           <div className="grid sm:grid-cols-[1fr_160px] gap-4 items-center p-6">
-            <div className="flex flex-col gap-1.5"><strong className="text-xl">In-home training</strong><span className="text-muted-dark">{pricing.training.length}, 1:1, in your home</span><span className="disp not-italic text-lime text-[64px] mt-2">${pricing.training.price}</span></div>
+            <div className="flex flex-col gap-1.5"><strong className="text-xl">In-home training</strong><span className="text-muted-dark">{pricing.training.length}, 1:1, in your home</span><span className="disp not-italic text-navy text-[64px] mt-2">${pricing.training.price}</span></div>
             <Img name="ath2" alt="Black dog with a donut toy on the slatmill" sizes="(min-width: 640px) 160px, 100vw" className="w-full sm:w-40 h-56 sm:h-40 object-cover object-[center_35%] rounded-2xl" />
           </div>
         </div>

@@ -22,8 +22,8 @@ export function ServiceTrio() {
   return (
     <section className="bg-teal pt-2 pb-16" aria-label="What we do">
       <div className="wrap grid md:grid-cols-3 gap-5">
-        <Card img="svc-gym" alt="Trainer crouched beside two dogs on dual slatmills" title={<>Mobile<br />dog gym</>} blurb="Their pace. Their workout. Right at your door." href="/mobile-dog-gym/" cta="Learn more" ctaLabel="Learn more about the mobile dog gym" />
-        <Card title={<>In-home<br />training</>} blurb="Everyday skills. Personal coaching. Better together." href="/dog-training/" cta="Learn more" ctaLabel="Learn more about in-home training"
+        <Card img="svc-gym" alt="Trainer crouched beside two dogs on dual slatmills" title={<>Mobile<br />dog gym</>} blurb="Their pace. Their workout. Right at your door." href="/mobile-dog-gym/" cta="See the mobile dog gym" ctaLabel="See the mobile dog gym" />
+        <Card title={<>In-home<br />training</>} blurb="Everyday skills. Personal coaching. Better together." href="/dog-training/" cta="See in-home training" ctaLabel="See in-home training"
           tile={<div className="bg-gradient-to-br from-navy to-navy-card flex flex-col items-center justify-center gap-2.5 p-5 text-center h-48 sm:h-full"><svg aria-hidden="true" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#84C06C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 11 12 4l9 7v9H3z" /><path d="M10 20v-6h4v6" /></svg><span className="disp text-[26px] text-lime">Good habits.<br />At home.</span></div>} />
         <Card img="ath4" alt="Brown and white dog running toward the camera" title={<>Meet<br />the pack</>} blurb="Real pups. Real workouts. A whole lot of personality." href="/our-pack/" cta="See our pack" />
       </div>
@@ -78,7 +78,7 @@ export function Transformation() {
               <div key={l}><p className="font-display font-black text-[56px] leading-none m-0">{n}</p><p className="font-semibold m-0 mt-1">{l}</p></div>
             ))}
           </div>
-          <p className="text-xs opacity-75 m-0">Every dog is different. Exercise supports a healthy routine; outcomes vary. Check with your veterinarian if you have concerns about your dog&apos;s fitness for exercise.</p>
+          <p className="text-xs text-bone-mid m-0">Every dog is different. Exercise supports a healthy routine; outcomes vary. Check with your veterinarian if you have concerns about your dog&apos;s fitness for exercise.</p>
         </div>
         <Img name="transform" alt="Two doodles side by side on slatmills in the van" sizes="(min-width: 1024px) 50vw, 100vw" className="w-full h-[320px] lg:h-[440px] object-cover object-[center_40%] rounded-2xl" />
       </div>
@@ -121,7 +121,7 @@ export function FinalCTA({ placement = "final_cta" }: { placement?: string }) {
         <h2 id="cta-h" className="disp text-[60px] md:text-[112px]">Ready to<br />unleash the fun?</h2>
         <p className="text-lg md:text-xl m-0 max-w-[520px] leading-relaxed">The gym comes to you. The happy goes home with them.</p>
         <BookButton placement={placement} variant="navy" className="min-h-[64px] px-10 text-[22px]">Book your dog&apos;s first run</BookButton>
-        <p className="text-[13px] opacity-75 m-0">Scheduling and payment happen on our secure MoeGo booking page.</p>
+        <p className="text-[13px] text-navy m-0">Scheduling and payment happen on our secure MoeGo booking page.</p>
       </div>
     </section>
   );

@@ -31,7 +31,7 @@ export default function Home() {
               <div className="flex items-center gap-2.5 flex-wrap"><h3 className="disp not-italic text-[36px] text-white">{s.t}</h3>{s.tag && <span className="kick text-[11px] border border-lime px-2 py-1 rounded">Tailored · subject to availability</span>}</div>
               <ul className="m-0 pl-5 text-bone-mid leading-relaxed">{s.items.map((i) => <li key={i}>{i}</li>)}</ul>
               <p className="text-muted m-0 leading-relaxed">{s.d}</p>
-              <a href={s.href} className="btn btn-ghost self-start mt-auto" aria-label={`Learn more about ${s.t}`}>Learn more</a>
+              <a href={s.href} className="btn btn-ghost self-start mt-auto" >See {s.t.toLowerCase()}</a>
             </article>
           ))}
         </div>
