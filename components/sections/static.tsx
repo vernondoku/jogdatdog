@@ -8,9 +8,9 @@ import RatingBadge from "./RatingBadge";
 const Arrow = () => <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17 17 7M9 7h8v8" /></svg>;
 
 export function ServiceTrio() {
-  const Card = ({ img, alt, title, blurb, href, cta, ctaLabel, tile }: { img?: "svc-gym" | "ath4"; alt?: string; title: React.ReactNode; blurb: string; href: string; cta: string; ctaLabel?: string; tile?: React.ReactNode }) => (
+  const Card = ({ img, alt, title, blurb, href, cta, ctaLabel, tile, pos }: { img?: "svc-gym" | "ath4"; alt?: string; pos?: string; title: React.ReactNode; blurb: string; href: string; cta: string; ctaLabel?: string; tile?: React.ReactNode }) => (
     <article className="card-light grid sm:grid-cols-[190px_1fr] overflow-hidden min-h-[220px] shadow-[0_20px_40px_rgba(0,40,62,.25)] transition-transform hover:-translate-y-1.5">
-      {img ? <Img name={img} alt={alt} sizes="(min-width: 640px) 190px, 100vw" className="w-full h-48 sm:h-full object-cover" /> : tile}
+      {img ? <Img name={img} alt={alt} sizes="(min-width: 640px) 190px, 100vw" className={`w-full h-48 sm:h-full object-cover ${pos ?? "object-center"}`} /> : tile}
       <div className="flex flex-col gap-2.5 p-6">
         <h2 className="disp text-[32px]">{title}</h2>
         <span className="block w-12 h-1 bg-lime rounded" />
@@ -25,7 +25,7 @@ export function ServiceTrio() {
         <Card img="svc-gym" alt="Trainer crouched beside two dogs on dual slatmills" title={<>Mobile<br />dog gym</>} blurb="Their pace. Their workout. Right at your door." href="/mobile-dog-gym/" cta="See the mobile dog gym" ctaLabel="See the mobile dog gym" />
         <Card title={<>In-home<br />training</>} blurb="Everyday skills. Personal coaching. Better together." href="/dog-training/" cta="See in-home training" ctaLabel="See in-home training"
           tile={<div className="bg-gradient-to-br from-navy to-navy-card flex flex-col items-center justify-center gap-2.5 p-5 text-center h-48 sm:h-full"><svg aria-hidden="true" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#84C06C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 11 12 4l9 7v9H3z" /><path d="M10 20v-6h4v6" /></svg><span className="disp text-[26px] text-lime">Good habits.<br />At home.</span></div>} />
-        <Card img="ath4" alt="Brown and white dog running toward the camera" title={<>Meet<br />the pack</>} blurb="Real pups. Real workouts. A whole lot of personality." href="/our-pack/" cta="See our pack" />
+        <Card img="ath4" pos="object-[center_30%]" alt="Brown and white dog running toward the camera" title={<>Meet<br />the pack</>} blurb="Real pups. Real workouts. A whole lot of personality." href="/our-pack/" cta="See our pack" />
       </div>
     </section>
   );
