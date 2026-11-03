@@ -7,7 +7,7 @@ import Img from "@/components/Img";
 
 export const metadata: Metadata = {
   title: "About Us — Kansas City's Mobile Dog Gym",
-  description: "Jog Dat Dog started with a simple idea: most dogs don't get enough real exercise, so we built a gym that drives to them. Meet the team behind Kansas City's mobile dog gym.",
+  description: "Dogs deserve more than a walk. So we built a gym that drives to them. Meet the founder behind Kansas City's mobile dog gym and read how Jog Dat Dog began.",
   alternates: { canonical: "/about/" },
 };
 
@@ -17,7 +17,7 @@ export default function Page() {
   return (
     <>
       <PageHero kick="About Us" title={<>Our <span className="text-lime">story</span></>}
-        blurb="Jog Dat Dog started with a simple idea: most dogs don't get enough real exercise, and most owners don't have the time or the space to fix that. So we built a gym that drives to them."
+        blurb="Dogs deserve more than a walk. So we built a gym that drives to them — dog-powered slatmills, real workouts, right in your driveway."
         img="founder" alt="Founder Vernon sitting in the open door of the Jog Dat Dog van" placement="about_hero" />
       <div className="bg-bone text-navy">
         <section className="wrap pt-16 pb-6 grid md:grid-cols-3 gap-5 items-start">
