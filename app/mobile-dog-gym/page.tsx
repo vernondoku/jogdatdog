@@ -27,7 +27,7 @@ export default function Page() {
     <>
       <PageHero kick="Mobile Dog Gym" title={<>The mobile<br /><span className="text-lime">dog gym</span></>}
         blurb="A safe, structured, supervised workout on a dog-powered slatmill — parked in your driveway, adjusted to your dog."
-        video="/video/step3-stride.mp4" poster="svc-gym" alt="Two dogs running side by side on dual slatmills"
+        video="/video/step3-stride.mp4" poster="svc-gym" alt="Doodle running on a slatmill inside the mobile gym"
         placement="gym_hero" secondary={{ href: "/pricing/", label: "See pricing" }} />
       <div className="bg-bone text-navy">
         <section className="wrap pt-14 pb-6 flex flex-col gap-6" aria-label="Benefits">

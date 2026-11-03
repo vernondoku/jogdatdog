@@ -15,7 +15,7 @@ export function WatchSection() {
         </div>
         <button type="button" onClick={() => open({ src: "/video/reel.mp4", title: "The pack in action · 0:44" })}
           className="reveal relative rounded-3xl overflow-hidden border-2 border-bone/10 hover:border-lime transition-colors group">
-          <Img name="hero-desktop" alt="Two dogs running side by side on slatmills inside the mobile gym" sizes="(min-width: 1280px) 1200px, 100vw" className="w-full h-[320px] md:h-[560px] object-cover object-[center_40%]" />
+          <Img name="hero-desktop" alt="A lab and a pit mix running side by side on dual slatmills inside the mobile gym" sizes="(min-width: 1280px) 1200px, 100vw" className="w-full h-[320px] md:h-[560px] object-cover object-[center_40%]" />
           <span className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-navy/35 group-hover:bg-navy/25 transition-colors">
             <PlayIcon size={96} />
             <span className="flex flex-col items-center gap-1"><strong className="disp text-[32px] md:text-[40px] text-white">The pack in action</strong><span className="text-sm text-bone-mid">0:44 · sound on</span></span>

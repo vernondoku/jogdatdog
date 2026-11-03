@@ -22,10 +22,10 @@ export function ServiceTrio() {
   return (
     <section className="bg-teal pt-2 pb-16" aria-label="What we do">
       <div className="wrap grid md:grid-cols-3 gap-5">
-        <Card img="svc-gym" alt="Trainer crouched beside two dogs on dual slatmills" title={<>Mobile<br />dog gym</>} blurb="Their pace. Their workout. Right at your door." href="/mobile-dog-gym/" cta="See the mobile dog gym" ctaLabel="See the mobile dog gym" />
+        <Card img="svc-gym" alt="Doodle running on a slatmill inside the mobile gym" title={<>Mobile<br />dog gym</>} blurb="Their pace. Their workout. Right at your door." href="/mobile-dog-gym/" cta="See the mobile dog gym" ctaLabel="See the mobile dog gym" />
         <Card title={<>In-home<br />training</>} blurb="Everyday skills. Personal coaching. Better together." href="/dog-training/" cta="See in-home training" ctaLabel="See in-home training"
           tile={<div className="bg-gradient-to-br from-navy to-navy-card flex flex-col items-center justify-center gap-2.5 p-5 text-center h-48 sm:h-full"><svg aria-hidden="true" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#84C06C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 11 12 4l9 7v9H3z" /><path d="M10 20v-6h4v6" /></svg><span className="disp text-[26px] text-lime">Good habits.<br />At home.</span></div>} />
-        <Card img="ath4" pos="object-[center_30%]" alt="Brown and white dog running toward the camera" title={<>Meet<br />the pack</>} blurb="Real pups. Real workouts. A whole lot of personality." href="/our-pack/" cta="See our pack" />
+        <Card img="ath4" pos="object-[center_40%]" alt="Brown and white dog looking out the window of the Jog Dat Dog van" title={<>Meet<br />the pack</>} blurb="Real pups. Real workouts. A whole lot of personality." href="/our-pack/" cta="See our pack" />
       </div>
     </section>
   );
@@ -80,7 +80,7 @@ export function Transformation() {
           </div>
           <p className="text-xs text-bone-mid m-0">Every dog is different. Exercise supports a healthy routine; outcomes vary. Check with your veterinarian if you have concerns about your dog&apos;s fitness for exercise.</p>
         </div>
-        <Img name="transform" alt="Two doodles side by side on slatmills in the van" sizes="(min-width: 1024px) 50vw, 100vw" className="w-full h-[320px] lg:h-[440px] object-cover object-[center_40%] rounded-2xl" />
+        <Img name="transform" alt="Two dogs running side by side on slatmills inside the van" sizes="(min-width: 1024px) 50vw, 100vw" className="w-full h-[320px] lg:h-[440px] object-cover object-[center_40%] rounded-2xl" />
       </div>
     </section>
   );

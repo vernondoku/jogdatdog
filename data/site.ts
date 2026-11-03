@@ -106,7 +106,7 @@ export const steps: { num: string; title: string; caption: string; desc: string;
     desc: "Your driveway becomes their next adventure. We bring the equipment and the encouragement.",
     video: "/video/step1-arrive.mp4",
     poster: "step1-arrive",
-    alt: "Jog Dat Dog van parked on a residential street",
+    alt: "Vernon pointing to a happy dog in the window of the Jog Dat Dog van",
   },
   {
     num: "02",
@@ -124,7 +124,7 @@ export const steps: { num: string; title: string; caption: string; desc: string;
     desc: "A supervised run where your dog sets the speed. We watch form, breathing, and energy the whole time.",
     video: "/video/step3-stride.mp4",
     poster: "svc-gym",
-    alt: "Two dogs running side by side on dual slatmills",
+    alt: "Doodle running on a slatmill inside the mobile gym",
   },
   {
     num: "04",
@@ -141,7 +141,7 @@ export const steps: { num: string; title: string; caption: string; desc: string;
 export const benefits: { title: string; tag: string; line: string; more: string; img: ImgName; alt: string }[] = [
   { title: "Real exercise, not just a walk.", tag: "body", line: "A full trot or run, not a sniff-and-stroll.",
     more: "On a slatmill your dog can open up into a sustained trot or run — the kind of effort a leash walk rarely allows. Thirty minutes of real work, start to finish — the sweet spot we've found for dogs.",
-    img: "ath1", alt: "Goldendoodle running with tongue out" },
+    img: "ath1", alt: "Doodle on the slatmill inside the van" },
   { title: "A calmer dog at home.", tag: "mind", line: "Energy with somewhere to go.",
     more: "Structured exercise gives a dog's energy an outlet. Paired with a predictable routine, many dogs settle more easily afterward — less pacing, less barking at the window, more napping.",
     img: "ath2", alt: "Black dog with a donut toy on the slatmill" },
@@ -150,13 +150,13 @@ export const benefits: { title: string; tag: string; line: string; more: string;
     img: "ath3", alt: "Yellow lab on the slatmill, smiling" },
   { title: "Zero car rides.", tag: "ease", line: "The gym parks in your driveway.",
     more: "No drop-off, no pickup, no crate in the back seat. We come to you, run the session outside your door, and your dog walks back inside ready to relax.",
-    img: "ath4", alt: "Brown and white dog running toward the camera" },
+    img: "ath4", alt: "Brown and white dog looking out the van window" },
   { title: "Their pace, always.", tag: "body", line: "Dog-powered. No motor.",
     more: "The slatmill only moves when your dog moves it. There's no motor pushing the belt — your dog sets the speed and can stop any time, which makes it a natural fit for nervous first-timers and seasoned runners alike.",
     img: "step2-meet", alt: "Trainer with a doodle on the slatmill" },
   { title: "Built for multi-dog homes.", tag: "ease", line: "Up to four dogs in one visit.",
     more: "Dual slatmills mean two dogs can run side by side, and duo, trio, and quad sessions cover the whole household in a single stop. Same driveway, same visit, everyone tired.",
-    img: "transform", alt: "Two doodles side by side on slatmills" },
+    img: "transform", alt: "Two dogs running side by side on slatmills" },
 ];
 export const benefitTags = [
   { key: "all", label: "All benefits" },

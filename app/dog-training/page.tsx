@@ -27,7 +27,7 @@ export default function Page() {
     <>
       <PageHero kick="Dog Training" title={<>In-home<br /><span className="text-lime">dog training</span></>}
         blurb="Private sessions in the place your dog actually lives and learns — with you in the room, so the progress sticks after we leave."
-        img="svc-training" alt="Trainer with a client and their dog beside the Jog Dat Dog van"
+        img="svc-training" alt="Canine coach with a client's dog at the open door of the Jog Dat Dog van"
         cta="Book training" placement="training_hero" secondary={{ href: "/pricing/", label: "See pricing" }} />
       <div className="bg-bone text-navy">
         <section className="wrap py-16 md:py-20 grid lg:grid-cols-2 gap-10 items-start">
