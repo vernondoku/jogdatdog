@@ -174,5 +174,9 @@ export const faq = [
   { q: "What else do you offer?", a: "Beyond gym runs and training: a 30-minute dog walk, nail trim and dremel, and monthly slatmill rentals so your dog can run at home. Everything is on the pricing page." },
   { q: "Can you run more than one of my dogs?", a: "Yes — our dual slatmills handle duo, trio, and quad sessions for dogs from the same household." },
   { q: "What if it's raining or cold?", a: "The gym is a climate-controlled van, so sessions run year-round." },
+  { q: "What if my dog won't get on the slatmill?", a: "No worries. Our trained canine coaches use patience, positive reinforcement, and gentle encouragement to help your dog feel comfortable, and we'll never force a dog to run." },
+  { q: "Are there age or health restrictions?", a: "We welcome dogs of different ages and fitness levels, but puppies, seniors, and dogs with medical conditions require special consideration, and veterinary clearance may be necessary before participating." },
+  { q: "How should I prepare for my dog's first visit?", a: "Make sure your dog has had a potty break, avoid feeding a large meal right before the session, have fresh water available, and let our coach know about any health concerns or behavioral sensitivities." },
+  { q: "What is your cancellation and weather policy?", a: "We require at least 24 hours' notice for cancellations or rescheduling. Late cancellations and no-shows may incur a fee of up to 100%. If Jog Dat Dog cancels due to unsafe weather or unforeseen circumstances, we'll reschedule you at no charge." },
   { q: "How do I book?", a: "Online, any time, through our booking page. Pick a service, pick a time, done. First-time dogs start with an introductory session." },
 ];

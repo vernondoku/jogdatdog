@@ -25,7 +25,7 @@ export default function Footer() {
             <a href={site.social.facebook} target="_blank" rel="noopener" className="text-bone-mid hover:text-white">Facebook</a>
             <a href={site.social.youtube} target="_blank" rel="noopener" className="text-bone-mid hover:text-white">YouTube</a>
           </div>
-          <span className="pt-4">© {new Date().getFullYear()} Jog Dat Dog LLC</span>
+          <span className="pt-4">© {new Date().getFullYear()} Jog Dat Dog LLC · <Link href="/privacy/" className="hover:text-white">Privacy</Link></span>
         </div>
       </div>
     </footer>
