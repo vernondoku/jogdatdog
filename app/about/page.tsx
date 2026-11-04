@@ -7,9 +7,15 @@ import Img from "@/components/Img";
 
 export const metadata: Metadata = {
   title: "About Us — Kansas City's Mobile Dog Gym",
-  description: "Dogs deserve more than a walk. So we built a gym that drives to them. Meet the founder behind Kansas City's mobile dog gym and read how Jog Dat Dog began.",
+  description: "Dogs deserve more than a walk. So we built a gym that drives to them. Meet the founder and coaches behind Kansas City's mobile dog gym and read how Jog Dat Dog began.",
   alternates: { canonical: "/about/" },
 };
+
+const coaches = [
+  { name: "Vernon", role: "Founder & Canine Coach", img: "coach-vernon" as const },
+  { name: "Grace", role: "Canine Coach", img: "coach-grace" as const },
+  { name: "Lilly", role: "Canine Coach", img: "coach-lilly" as const },
+];
 
 const Check = () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#84C06C" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="shrink-0"><path d="m5 13 4 4L19 7" /></svg>;
 
@@ -35,6 +41,20 @@ export default function Page() {
             <p className="text-muted-dark m-0 leading-relaxed">{site.serviceAreaBlurb} Supporting local rescues through the Helping Paws program — donate a run at booking.</p>
             <BookButton placement="about_cta" className="self-start mt-auto" />
           </div>
+        </section>
+        <section className="wrap pb-20 flex flex-col gap-6" aria-labelledby="coaches">
+          <div className="flex flex-col gap-2">
+            <p className="kick text-teal-dark m-0">Meet the coaches</p>
+            <h2 id="coaches" className="disp not-italic text-[32px] md:text-[40px] m-0">The people in the van</h2>
+            <p className="text-muted-dark m-0 leading-relaxed max-w-[640px]">Every session is run by a Jog Dat Dog canine coach, inside the van with your dog the whole time.</p>
+          </div>
+          <ul className="m-0 p-0 list-none grid sm:grid-cols-3 gap-5">
+            {coaches.map((c) => (
+              <li key={c.name} className="rounded-[18px] overflow-hidden">
+                <Img name={c.img} alt={`${c.name}, ${c.role} at Jog Dat Dog, in front of the van`} sizes="(min-width: 640px) 33vw, 100vw" className="w-full aspect-[3/4] object-cover" />
+              </li>
+            ))}
+          </ul>
         </section>
       </div>
       <FinalCTA placement="about_final" />
