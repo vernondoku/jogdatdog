@@ -12,7 +12,6 @@ export const metadata: Metadata = {
 };
 
 const coaches = [
-  { name: "Vernon", role: "Founder & Canine Coach", img: "coach-vernon" as const },
   { name: "Grace", role: "Canine Coach", img: "coach-grace" as const },
   { name: "Lilly", role: "Canine Coach", img: "coach-lilly" as const },
 ];
@@ -48,7 +47,7 @@ export default function Page() {
             <h2 id="coaches" className="disp not-italic text-[32px] md:text-[40px] m-0">The people in the van</h2>
             <p className="text-muted-dark m-0 leading-relaxed max-w-[640px]">Every session is run by a Jog Dat Dog canine coach, inside the van with your dog the whole time.</p>
           </div>
-          <ul className="m-0 p-0 list-none grid sm:grid-cols-3 gap-5">
+          <ul className="m-0 p-0 list-none grid sm:grid-cols-2 gap-5 max-w-[760px]">
             {coaches.map((c) => (
               <li key={c.name} className="rounded-[18px] overflow-hidden">
                 <Img name={c.img} alt={`${c.name}, ${c.role} at Jog Dat Dog, in front of the van`} sizes="(min-width: 640px) 33vw, 100vw" className="w-full aspect-[3/4] object-cover" />
