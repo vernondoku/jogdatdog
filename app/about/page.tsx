@@ -24,7 +24,7 @@ export default function Page() {
     <>
       <PageHero kick="About Us" title={<>Our <span className="text-lime">story</span></>}
         blurb="Dogs deserve more than a walk. So we built a gym that drives to them — dog-powered slatmills, real workouts, right in your driveway."
-        img="founder" alt="Founder Vernon smiling in front of the Jog Dat Dog van" placement="about_hero" />
+        img="coach-vernon" imgPos="object-[center_18%]" alt="Founder Vernon in his Jog Dat Dog coach polo in front of the van" placement="about_hero" />
       <div className="bg-bone text-navy">
         <section className="wrap pt-16 pb-6 grid md:grid-cols-3 gap-5 items-start">
           <div className="card-light p-7 flex flex-col gap-3"><span className="inline-flex w-[52px] h-[52px] rounded-2xl bg-navy items-center justify-center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#84C06C" strokeWidth="2.4" strokeLinecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="4" /><path d="M12 3v3M12 18v3M3 12h3M18 12h3" /></svg></span><strong className="disp not-italic text-[28px]">Our mission</strong><p className="text-muted-dark m-0 leading-relaxed">A happier, healthier, more fulfilled dog — without the owner leaving home. Structured exercise, enrichment, and training that fits real life.</p></div>
