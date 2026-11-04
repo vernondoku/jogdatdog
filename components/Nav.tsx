@@ -3,7 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { nav, site } from "@/data/site";
-import { captureAttribution } from "@/lib/tracking";
+import { captureAttribution, track } from "@/lib/tracking";
 import BookButton from "./BookButton";
 
 export default function Nav() {
@@ -55,7 +55,10 @@ export default function Nav() {
       </header>
       {/* sticky mobile booking bar */}
       <div className="lg:hidden fixed bottom-0 inset-x-0 z-40 flex items-center gap-2 px-4 py-2 bg-navy/95 backdrop-blur border-t border-bone/10" style={{ paddingBottom: "calc(8px + env(safe-area-inset-bottom))" }}>
-        <Link href="/pricing/" className="text-bone font-semibold text-sm px-3 min-h-[48px] inline-flex items-center">Pricing</Link>
+        <a href={site.phoneHref} onClick={() => track("phone_click", { placement: "sticky_mobile" })} aria-label={`Call Jog Dat Dog at ${site.phone}`}
+          className="inline-flex items-center justify-center gap-2 min-h-[48px] min-w-[48px] px-4 rounded-full bg-navy-card border border-lime/60 text-white font-display font-bold uppercase tracking-[0.1em] text-sm">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#84C06C" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2" /></svg>Call
+        </a>
         <BookButton placement="sticky_mobile" className="flex-1 min-h-[48px] text-[17px]" />
       </div>
     </>

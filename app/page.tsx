@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Hero, ServiceTrio, Ticker, HowItWorks, WatchSection, Athletes, Transformation, Reviews, PricingTable, FAQ, FinalCTA } from "@/components/sections";
+import { Hero, TrustStrip, ServiceTrio, Ticker, HowItWorks, WatchSection, Athletes, Transformation, Reviews, PricingTable, FAQ, FinalCTA } from "@/components/sections";
 import { site } from "@/data/site";
 import Img from "@/components/Img";
 
@@ -13,6 +13,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <TrustStrip />
       <ServiceTrio />
       <Ticker />
       <HowItWorks />

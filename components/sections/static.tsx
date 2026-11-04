@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { steps } from "@/data/site";
+import { steps, site } from "@/data/site";
 import reviews from "@/data/reviews.json";
 import BookButton from "../BookButton";
 import Img from "../Img";
@@ -31,6 +31,33 @@ export function ServiceTrio() {
   );
 }
 
+
+/** Trust strip under the hero. Only verified facts: rating/count checked against the Google listing on Nov 3, 2026. */
+export function TrustStrip() {
+  const facts = [
+    { k: "coach", t: "Canine coach with vet tech experience", d: "M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6zM9 12l2 2 4-4" },
+    { k: "van", t: "Climate-controlled mobile gym", d: "M3 7h11v8H3zM14 10h4l3 3v2h-7zM6 18a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3M17 18a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" },
+    { k: "mill", t: "Dog-powered slatmills, no motor", d: "M4 12h3l2-5 3 10 2-5h6" },
+    { k: "area", t: `KC metro, ${site.serviceRadiusMiles}-mile radius`, d: "M12 21s-6-5.5-6-10a6 6 0 1 1 12 0c0 4.5-6 10-6 10zM12 11a2 2 0 1 0 0-4 2 2 0 0 0 0 4" },
+  ];
+  return (
+    <section className="bg-teal text-navy" aria-label="Why families trust Jog Dat Dog">
+      <div className="wrap py-5 flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-8">
+        <a href={site.google.reviewsUrl} target="_blank" rel="noopener" className="inline-flex items-center gap-3 bg-navy text-bone rounded-full pl-3.5 pr-5 py-2 no-underline self-start shrink-0">
+          <span className="disp not-italic text-white text-[30px] leading-none">{site.google.rating}</span>
+          <span className="flex flex-col leading-tight"><span aria-hidden="true" className="text-lime tracking-[2px] text-base">★★★★★</span><span className="text-[12px] text-bone-mid">{site.google.reviewCount} Google reviews</span></span>
+        </a>
+        <ul className="m-0 p-0 list-none grid grid-cols-2 lg:flex lg:flex-wrap gap-x-6 gap-y-2.5 flex-1 lg:justify-between">
+          {facts.map((f) => (
+            <li key={f.k} className="flex items-center gap-2.5 font-semibold text-[15px] leading-snug lg:text-[14px]">
+              <span className="inline-flex w-8 h-8 rounded-lg bg-navy items-center justify-center shrink-0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#84C06C" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={f.d} /></svg></span>{f.t}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
+}
 
 export function Ticker() {
   const items = ["Mobile dog gym", "Slatmill workouts", "In-home training", "Kansas City metro", "Supervised. Personalized. Fun."];

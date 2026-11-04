@@ -1,4 +1,4 @@
-export { ServiceTrio, Ticker, HowItWorks, Transformation, Reviews, FinalCTA } from "./sections/static";
+export { TrustStrip, ServiceTrio, Ticker, HowItWorks, Transformation, Reviews, FinalCTA } from "./sections/static";
 export { default as RatingBadge } from "./sections/RatingBadge";
 export { Hero } from "./sections/Hero";
 export { WatchSection } from "./sections/WatchSection";
