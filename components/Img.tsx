@@ -27,7 +27,7 @@ export default function Img({ name, sizes = "(min-width: 1024px) 33vw, (min-widt
       alt={alt}
       className={className}
       loading={priority ? "eager" : "lazy"}
-      decoding={priority ? "sync" : "async"}
+      decoding="async"
       {...(priority ? { fetchPriority: "high" as const } : {})}
       {...rest}
     />

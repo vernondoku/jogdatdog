@@ -30,5 +30,13 @@
     "playwright": "^1.49.0",
     "lighthouse": "^12.2.0"
   },
-  "private": true
+  "private": true,
+  "browserslist": [
+    "chrome >= 110",
+    "safari >= 16",
+    "firefox >= 115",
+    "edge >= 110",
+    "ios >= 16",
+    "and_chr >= 110"
+  ]
 }
